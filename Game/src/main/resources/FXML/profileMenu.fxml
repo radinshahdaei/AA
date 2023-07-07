@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="View.ProfileMenuController"
+            prefHeight="400" prefWidth="300">
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <HBox alignment="CENTER" spacing="20">
+                <Label fx:id="currentUsername"/>
+                <ImageView fx:id="imageView" fitWidth="100" fitHeight="100" />
+            </HBox>
+
+            <Button alignment="BASELINE_LEFT" text="Change Username" fx:id="changeUsername" minWidth="200" onMouseClicked="#usernameMarked"/>
+            <TextField promptText="new username" styleClass="text-input" maxWidth="200" fx:id="username"/>
+
+            <Button text="Change Password" fx:id="changePassword" minWidth="200" onMouseClicked="#passwordMarked"/>
+            <PasswordField promptText="old password" styleClass="text-input" maxWidth="200" fx:id="oldPass"/>
+            <PasswordField promptText="new password" styleClass="text-input" maxWidth="200" fx:id="newPass"/>
+
+            <Button text="Remove account" minWidth="200" fx:id = "remove" onMouseClicked="#remove"/>
+
+            <HBox alignment="CENTER" spacing="5">
+                <Button text="Back" fx:id="back" onMouseClicked="#back"/>
+                <Button text="Logout" fx:id="logout" onMouseClicked="#logout"/>
+
+                <ComboBox promptText="Avatar" fx:id="changeAvatar" onAction="#changeAvatar">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Avatar_1"/>
+                            <String fx:value="Avatar_2"/>
+                            <String fx:value="Avatar_3"/>
+                            <String fx:value="Optional"/>
+                            <String fx:value="Random"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+
+
+        </VBox>
+    </center>
+
+</BorderPane>
