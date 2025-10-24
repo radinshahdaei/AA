@@ -1,3 +1,3 @@
-# AA
+# AA Mobile Game
 
-ُThis repository contains the source code for an AA inspired game written using Java and JavaFX. This projecy was an assignment for the Advanced Programming course in the Spring 2023 semester.
+ُThis repository contains the source code for an AA inspired game written using Java and JavaFX. This project was an assignment for the Advanced Programming course in the Spring 2023 semester.
